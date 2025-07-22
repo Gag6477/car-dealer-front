@@ -1,0 +1,19 @@
+.wrap
+    +flex(space-between, center)
+    padding: $gap-5 0
+    gap: $gap-3
+    .info
+        width : 50%
+        +flex(center, start, column)
+        gap: $gap-2
+    .img
+        width: 80%
+        max-width: 500px
+        aspect-ratio: 10 / 9
+        border-radius: $radius-l
+        overflow: hidden
+        & > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center

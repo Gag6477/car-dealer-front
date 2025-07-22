@@ -1,8 +1,8 @@
 import React from 'react'
-
-const CardLabel = ({type}) => {
+import s from "./CardLabel.module.sass"
+const CardLabel = ({type, text}) => {
   return (
-    <div>{type}</div>
+    <div className={`${s.label} ${s[type]}`}>{text}</div>
   )
 }
 

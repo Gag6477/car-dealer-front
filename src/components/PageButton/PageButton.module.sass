@@ -1,0 +1,15 @@
+.number
+    aspect-ratio:  1 / 1
+    background: $color-white
+    font-size: $font-xs
+    width: $gap-3
+    cursor: pointer
+    +flex(center, center)
+    border-radius: $radius-full
+    transition: $transition
+    &:not(:active):hover
+        transition: $transition
+        border: 1px solid $color-grey-5
+    &.active
+        background: $color-dark
+        color: $color-white

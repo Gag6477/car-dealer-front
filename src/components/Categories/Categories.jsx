@@ -4,6 +4,7 @@ import { FaCar } from 'react-icons/fa6'
 import Container from '../Container/Container'
 import s from "./Categories.module.sass"
 import More from '../More/More'
+import CategoryItem from '../CategoryItems/CategoryItem'
 
 const categories = [
     { icon: <FaCar />, title: "Car" },
@@ -15,30 +16,33 @@ const categories = [
 ]
 
 const CategoriesItem = ({ icon, title }) => {
-return (
-    <div className={s.item}>
-        {icon}
-        <div className={s.title}>{title}</div>
-    </div>
-)
+    return (
+        <div className={s.item}>
+            {icon}
+            <div className={s.title}>{title}</div>
+        </div>
+    )
 }
-    const Categories = () => {
-        return (
+const Categories = () => {
+    return (
+        <section>
             <div className={s.main}>
                 <Container>
                     <div className={s.wrap}>
                         <div className={s.top}>
-                        <Title text="Browse By Type"/>
-                        <More outlined={false} type='classic'/>
+                            <Title text="Browse By Type" />
+                            <More to='#' type='classic' text="View All" />
                         </div>
-                        
+
                         <div className={s.list}>
-                            {categories.map((cat) => <CategoriesItem icon={cat.icon} title={cat.title}/>)}
+                            {categories.map((cat, i) =>
+                                <CategoryItem key={i} icon={cat.icon} title={cat.title} />)}
                         </div>
                     </div>
                 </Container>
             </div>
-        )
-    }
+        </section>
+    )
+}
 
-    export default Categories
+export default Categories

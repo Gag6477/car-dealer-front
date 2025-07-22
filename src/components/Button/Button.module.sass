@@ -1,17 +1,45 @@
-@use "@/styles/variables" as *
-@use "@/styles/mixins" as *
-@use "@/styles/functions" as *
-
+@use "sass:color"
 .button
     font-size: $font-xs
     padding: 1em 2em
+    white-space: nowrap
+    cursor: pointer
+    gap: 1em
+    +flex(center)
+    transition: $transition
+    &:hover
+        letter-spacing: 1px
+.normal
+    border-radius: $radius-s
 .classic
-    color: $color-white  
+    color: $color-white
     border: 1px solid $color-white
-    
-    border-radius: $radius
+    border-radius: $radius-l
+    &:hover
+        color: $color-dark
+        background: $color-white
+    &.fill
+        background: $color-white
+        color: $color-dark
+
 .success
-    color
+    color: $color-accent
+    border: 1px solid $color-accent
+    &:hover
+        color: $color-white
+        background: $color-accent
+.info
+    color: $color-white
+    border: 1px solid $color-white
+    background-color: $color-dark
+    &:hover
+        color: $color-dark
+        background: $color-white
+    &.fill
+        background: $color-dark
+        color: $color-white
+.full
+    border-radius: calc( infinity * 1px )
 
-
-
+.rtl
+    flex-direction: row-reverse

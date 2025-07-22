@@ -1,6 +1,4 @@
-@use "@/styles/variables" as *
-@use "@/styles/mixins" as *
-@use "@/styles/functions" as *
+
 
 .header
     backdrop-filter: blur(2px)
@@ -12,9 +10,8 @@
 
     .wrap
         height: 100%
-        display: flex
-        align-items: center
-        justify-content: space-between
+        gap: 2em
+        +flex(space-between, center)
         .logo
             font-family: $family-logo
             font-size: $font-l
@@ -24,8 +21,14 @@
             text-transform: uppercase
             color: #fff
         .nav
+            +flex(end, center)
+            flex-grow: 1
             .menu
-                display: flex
+                +flex(start, center)
                 gap: 2em
                 color: #fff
                 height: 100%
+                .signIn
+                    gap: 0.5em
+                    +flex(center, center)
+                    gap: 4px

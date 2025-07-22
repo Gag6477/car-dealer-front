@@ -1,8 +1,10 @@
 import React from 'react'
-
+import s from "./Title.module.sass"
 const Title = ({text}) => {
   return (
-    <div>{text}</div>
+    <div className={s.title}>
+      {text}
+    </div>
   )
 }
 

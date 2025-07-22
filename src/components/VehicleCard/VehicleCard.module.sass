@@ -1,0 +1,57 @@
+
+.card
+    color: $color-dark
+    border-radius: $radius-l
+    border: 1px solid $color-grey-5
+    overflow: hidden
+    position: relative
+    max-width: 300px
+    justify-self: center
+    .img
+        aspect-ratio: 3 / 2
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    .info
+        padding: $gap-1 $gap-2 $gap-2 $gap-2
+        +flex(start, stretch, column)
+        gap: calc($gap-1 / 2)
+        .heading
+            font-size: $font-m
+            font-weight: 600
+        .desc
+            font-size: $font-xs
+            font-weight: 400
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+        .params
+            +flex(space-between, center)
+            padding: calc($gap-1  / 2) 0
+            .param
+                +flex(start, center, column)
+                gap: calc($gap-1  / 2)
+                font-size: $font-m
+                .value
+                    font-size: $font-xs
+                    font-weight: 400
+        .footer
+            padding: $gap-1 0
+            +flex(space-between, last baseline)
+            .price
+                .old
+                    font-size: $font-xs
+                    font-weight: 400
+                .new
+                    font-size: $font-m
+                    font-weight: 700
+    .label
+        position: absolute
+        top: $gap-1
+        left: $gap-1
+    .action
+        position: absolute
+        top: $gap-1
+        right: $gap-1

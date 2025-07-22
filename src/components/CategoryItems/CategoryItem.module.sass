@@ -1,0 +1,21 @@
+
+
+.item
+    color: $color-dark
+    +flex(center, center, column)
+    gap: $gap-1
+    width: 10em
+    border: 1px solid $color-grey-5
+    border-radius: $radius-l
+    aspect-ratio: 1 / 1
+    
+    .icon
+        font-size:$font-l
+        background: rgba($color-grey-5, 0.5)
+        +flex(center, center)
+        width: 3em
+        aspect-ratio: 1 / 1
+        border-radius: 50%
+        border-radius: $radius-full
+    .title
+        font-size: $font-m

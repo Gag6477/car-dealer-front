@@ -1,32 +1,56 @@
 import React from 'react'
 import Slider from 'react-slick'
-import { MdOutlineLocalGasStation, MdSpeed } from "react-icons/md"
+import {MdSpeed } from "react-icons/md"
 import { TbManualGearbox } from "react-icons/tb"
-import More from '../../components/More/More'
 import s from './Hero.module.sass'
+import Container from '../Container/Container'
+import { Link } from 'react-router'
+import Button from '../Button/Button'
+import { BsArrowUpRight } from 'react-icons/bs'
+import {LiaAngleLeftSolid, LiaAngleRightSolid } from 'react-icons/lia'
+import { PiGasPump } from 'react-icons/pi'
 
-
+const NextArrow = ({onClick}) => {
+  return <div
+ className={`${s.arrow} ${s.next}`}
+    onClick={onClick}>
+      <LiaAngleRightSolid/>
+  </div>
+}
+const PrevArrow = ({onClick}) => {
+  return <div
+  className={`${s.arrow} ${s.prev}`}
+    onClick={onClick}>
+      <LiaAngleLeftSolid/>
+  </div>
+}
 
 const Slide = ({ price, model, fuel, transmission, mileage, image }) => {
   return (
-    <div className={s.slide} style={{backgroundImage: `url(${image})`}}>
-      <div className={s.content}>
-        <div className={s.price}>${price}</div>
-        <div className={s.model}>{model}</div>
-        <div className={s.fuel}>
-          <MdOutlineLocalGasStation />
-          <span>{fuel}</span>
+    <div className={s.slide} style={{ backgroundImage: `url(${image})` }}>
+      <Container>
+        <div className={s.content}>
+          <div className={s.price}>${price}</div>
+          <div className={s.model}>{model}</div>
+          <div className={s.details}>
+            <div className={`${s.detail} ${s.fuel}`}>
+              <PiGasPump />
+              <span>{fuel}</span>
+            </div>
+            <div className={`${s.detail} ${s.mileage}`}>
+              <MdSpeed />
+              <span>{mileage} Miles</span>
+            </div>
+            <div className={`${s.detail} ${s.transmission}`}>
+              <TbManualGearbox />
+              <span> {transmission}</span>
+            </div>
+          </div>
+          <Link to="#">
+          <Button type='classic' rounded="normal" dir='rtl' text='Learn More' fill={true} icon={<BsArrowUpRight/>}/>
+          </Link>
         </div>
-        <div className={s.mileage}>
-          <MdSpeed />
-          <span>{mileage}</span>
-        </div>
-        <div className={s.transmission}>
-          <TbManualGearbox />
-          <span> {transmission}</span>
-        </div>
-        <More />
-      </div>
+      </Container>
     </div>
 
   )
@@ -39,7 +63,7 @@ const slides = [
     price: 85000,
     model: "Mercedes-AMG C63s",
     fuel: "petrol",
-    transmission: " AMG SPEEDSHIFT TCT 9-speed automatic",
+    transmission: "Automatic",
     mileage: "3489",
     image: "https://hips.hearstapps.com/hmg-prod/images/2023-mercedes-amg-c63-s-e-performance-109-65d79697e865a.jpg?crop=0.651xw:0.549xh;0.0897xw,0.326xh&resize=1200:*"
 
@@ -48,7 +72,7 @@ const slides = [
     price: 85000,
     model: "Mercedes-AMG C63s",
     fuel: "petrol",
-    transmission: " AMG SPEEDSHIFT TCT 9-speed automatic",
+    transmission: "Automatic",
     mileage: "3489",
     image: "https://hips.hearstapps.com/hmg-prod/images/2023-mercedes-amg-c63-s-e-performance-109-65d79697e865a.jpg?crop=0.651xw:0.549xh;0.0897xw,0.326xh&resize=1200:*"
 
@@ -57,7 +81,7 @@ const slides = [
     price: 85000,
     model: "Mercedes-AMG C63s",
     fuel: "petrol",
-    transmission: " AMG SPEEDSHIFT TCT 9-speed automatic",
+    transmission: "Automatic",
     mileage: "3489",
     image: "https://hips.hearstapps.com/hmg-prod/images/2023-mercedes-amg-c63-s-e-performance-109-65d79697e865a.jpg?crop=0.651xw:0.549xh;0.0897xw,0.326xh&resize=1200:*"
 
@@ -66,20 +90,21 @@ const slides = [
     price: 85000,
     model: "Mercedes-AMG C63s",
     fuel: "petrol",
-    transmission: " AMG SPEEDSHIFT TCT 9-speed automatic",
+    transmission: "Automatic",
     mileage: "3489",
     image: "https://hips.hearstapps.com/hmg-prod/images/2023-mercedes-amg-c63-s-e-performance-109-65d79697e865a.jpg?crop=0.651xw:0.549xh;0.0897xw,0.326xh&resize=1200:*"
-
   }
+  
 ]
 
 const Hero = () => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <NextArrow/>,
+    prevArrow: <PrevArrow/>,
   }
   return (
     <Slider {...settings}>
