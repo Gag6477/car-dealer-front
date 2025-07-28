@@ -1,18 +1,26 @@
 .team
-     .wrap
+    .wrap
         +flex(start, start, column)
         gap: $gap-3
         .top
             width: 100%
             +flex(space-between, center)
         .list
-            +flex(space-between, start)
-            gap: $gap-3
-            .icon   
-                font-size: $font-xxs
-            .title
-                font-size: $font-m
-                font-weight: 500
-            .subtitle
-                font-size: $font-s
-                font-weight: 400
+            width: 100%
+            +cols(4)
+            gap: 2em
+            .item
+                display: grid
+                gap: 1em
+                .img
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .title
+                    font-size: $font-m
+                    font-weight: 500
+                .path
+                    font-size: $font-xs
+                    font-weight: 400
+
