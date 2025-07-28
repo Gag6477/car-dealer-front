@@ -1,0 +1,20 @@
+.main
+    .wrap
+        +flex(start, stretch, column)
+        gap: $gap-3
+        .list
+            +flex(space-between, start)
+            gap: $gap-3
+            .item
+                +flex(start, start, column)
+                gap: $gap-1
+                color: $color-dark
+                .icon   
+                    font-size: $font-xxl
+                .title
+                    font-size: $font-m
+                    font-weight: 500
+                .subtitle
+                    font-size: $font-s
+                    font-weight: 400
+                    

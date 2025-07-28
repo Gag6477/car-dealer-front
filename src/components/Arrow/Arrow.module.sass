@@ -1,0 +1,17 @@
+.arrow
+    padding: 0.5em 1em
+    +flex(center, center)
+    position: absolute
+    background: $color-white
+    border-radius: $radius-full
+    color: $color-dark
+    cursor: pointer
+    top: 50%
+    translate: 0 -50%
+    transition: $transition
+    &:hover
+        background: $color-grey-4
+    &.right
+        left: 100%
+    &.left
+        right: 100%
