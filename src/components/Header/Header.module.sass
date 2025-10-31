@@ -1,12 +1,13 @@
 
-
 .header
     backdrop-filter: blur(2px)
-    position: fixed
     z-index: 99999
     width: 100vw
     height: 80px
+    top: 0
+    left: 0
     background: #0005
+    
 
     .wrap
         height: 100%
@@ -32,3 +33,18 @@
                     gap: 0.5em
                     +flex(center, center)
                     gap: 4px
+                .langbar
+                    position: relative
+                    .selected
+                        height: 2em
+                        img
+                            height: 100%
+                    .lang_list
+                        position: absolute
+                        top: 100%
+                        left: 0
+                        width: 100%
+                        .option
+                            height: 2em
+                            img
+                                height: 100%

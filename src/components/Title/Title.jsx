@@ -1,10 +1,10 @@
 import React from 'react'
 import s from "./Title.module.sass"
-const Title = ({text}) => {
+const Title = ({text, level=2}) => {
+  const Heading = `h${level}`
+
   return (
-    <div className={s.title}>
-      {text}
-    </div>
+    <Heading className={s.title}>{text}</Heading>
   )
 }
 

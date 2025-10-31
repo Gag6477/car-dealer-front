@@ -7,7 +7,7 @@ import bgImage from '../../assets/img/bgImage.jpg'
 
 const FindOutMore = () => {
   return (
-    <section className={s.main} style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className={s.main} style={{ background: `url(${bgImage}) no-repeat center center / cover`}}>
       <Container>
         <div className={s.wrap}>
          <h1 className={s.findOutMore}>We Make Finding The <br /> Right Car Simple</h1>

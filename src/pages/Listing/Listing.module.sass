@@ -1,0 +1,31 @@
+.all
+    padding: 2em 0
+    display: grid
+    grid-template-columns: 350px 1fr
+    grid-template-areas: "h h" "a m"
+    gap: 2em
+    .header
+        grid-area: h
+    .aside
+        grid-area: a
+        +flex(start, stretch, column)
+        gap: $gap-2
+    .main
+        grid-area: m
+        +flex(space-between, stretch, column)
+        gap: $gap-3
+        .top
+            +flex(space-between, center)
+            padding-bottom: 2em
+            font-weight: 400
+            font-size: $font-s
+            .results
+                color: $color-dark
+            .sortby
+                color: $color-grey-4
+                +flex(center, center)
+                gap: 1em
+        .list
+            +cols(3)
+            justify-items: start
+            gap: $gap-1

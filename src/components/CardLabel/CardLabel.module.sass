@@ -1,12 +1,23 @@
+@use "sass:color"
 .label
-    color: $color-white
     padding: 0.5em 1em
     border-radius: $radius-full
     font-size: $font-xs
     line-height: 1
-.info
+    color: $color-mid
     background: $color-light
+    +flex(center, center)
+    gap: 0.5em
+    box-shadow: 0 5px 10px #0002
+.info
+    background: $color-mid
+    color: $color-white
 .success
     background: $color-accent
-.danger
-.warning  
+    color: $color-white
+.types
+    background: $color-white
+    color: $color-black
+.share
+    background: $color-light
+    color: $color-black

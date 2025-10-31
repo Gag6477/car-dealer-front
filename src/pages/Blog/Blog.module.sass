@@ -1,0 +1,10 @@
+.blog
+    padding: $gap-3 0 
+    .wrap
+        +flex(start, stretch, column)
+        gap: $gap-1
+        padding: $gap-1 0
+        .blogCard
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+            gap: $gap-2

@@ -40,10 +40,10 @@ const VehicleCard = () => {
         </div>
       </div>
       <div className={s.label}>
-      <CardLabel type='info' text="low Mileage" />
-    </div>
+        <CardLabel type='info' text="low Mileage" />
+      </div>
       <div className={s.action}>
-      <ActionLabel type="save"/>
+        <ActionLabel type="save" />
       </div>
     </div>
   )

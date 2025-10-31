@@ -1,0 +1,51 @@
+.main
+    .wrap
+        +flex(space-between, center)
+        position: relative
+        &::after
+            content: ""
+            width: 110%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 50%
+            translate: -50% 0 
+            background: radial-gradient(
+            #eef0fc,
+            #dce2f1
+            )
+            border-radius: $radius-l
+            z-index: -1
+        .block
+            max-width: 650px
+            width: 90%
+            +flex(center, start, column)
+            gap: $gap-2
+            .buttons
+                +flex(start, center)
+                gap: $gap-2
+                .button
+                    +flex(center, center)
+                    gap: $gap-1
+                    background: $color-dark
+                    color: $color-white
+                    font-size: $font-l
+                    padding: $gap-1
+                    white-space: nowrap
+                    border-radius: $radius-l
+                    .line
+                        width: 1px
+                        align-self: stretch
+                        background: #fff5
+                    .heading
+                        .subtitle
+                            font-size: $font-xxs
+                            font-weight: 400
+                            
+                        .title
+                            font-size: $font-s
+                            font-weight: 500
+        .img
+            padding: 50px 50px 0 0
+            img
+                display: block

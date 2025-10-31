@@ -1,0 +1,35 @@
+.wrap
+    +flex(start, stretch)
+    padding: 7em 10em 
+    .firstHalf
+        +flex(start, stretch, column)
+        width: 70%
+        border: 1px solid $color-grey-5
+        padding: $gap-2 $gap-5 $gap-2 $gap-2
+        gap: $gap-3
+        border-radius:  $radius-m 0 0 $radius-m 
+        .header
+            +flex(start, start, column)
+            gap: $gap-1
+            .use
+                font-weight: 400
+        .calc
+            +flex(start, stretch, column)
+            gap: $gap-1
+            .inputDollar
+                +cols(2)
+                gap: $gap-2
+    .secondHalf       
+        width: 30%
+        background-color: $color-light 
+        border-radius: 0 $radius-m $radius-m 0      
+        .pricediv
+            +flex(center, start, column)
+            height: 100%
+            padding:  $gap-2
+            gap: $gap-2
+            .totalprice
+                +flex(start, start, column)
+                gap: 0.8em
+                .priceNumber  
+                    color: $color-mid

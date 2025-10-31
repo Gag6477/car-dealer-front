@@ -1,0 +1,70 @@
+.loginPage
+    padding: $gap-2
+    .wrap
+        +flex(center, center, column)
+        width: 100%
+        .form
+            width: 90%
+            max-width: 500px
+            +flex(start, stretch, column)
+            gap: $gap-2
+            .titles
+                +flex(start, stretch)
+                gap: $gap-1
+                padding: $gap-1 0
+                border-bottom: 1px solid $color-grey-5
+                position: relative
+                .signin
+                    font-weight: 500
+                .line
+                    position: absolute
+                    bottom: 0
+                    width: 50px
+                    height: 2px
+                    background: $color-mid
+            .calc
+                +flex(start, center, column)
+                gap: $gap-2
+                border-top: 1px solid $color-grey-5
+                padding-top: $gap-2
+                .wrap
+                    +flex(start, start, column)
+                    gap: $gap-2
+                    width: 100%
+                    .inputDollar
+                        +flex(start, start, column)
+                        width: 100%
+                        gap: $gap-2
+            .input
+                +flex(start, stretch, column)
+                gap: $gap-1
+
+            .loginbutton
+                +flex(start, stretch, column)
+
+            .add
+                +flex(space-between)
+
+                .linksupport
+                    color: $color-mid
+                    text-decoration: underline
+            .register
+                +flex(start, stretch, column)
+                gap: $gap-2
+                .inputReg
+                    +flex(start, stretch, column)
+                    gap: $gap-1
+                    .terms
+                        +flex(start, center)
+                        gap: 0.3em
+                        .linksupport
+                            color: $color-mid
+                .signinback
+                    +flex(center, center)
+                    gap: 0.3em
+                    .linksignin
+                        color: $color-mid
+
+                            
+
+

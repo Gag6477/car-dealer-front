@@ -1,0 +1,270 @@
+.wrap
+    +flex(start, space-between, column)
+    gap: $gap-1
+    .header
+        +flex(start, start, column)
+        gap: $gap-1
+        .title
+            +flex(start, start, column)
+            gap: $gap-1
+        .top
+            width: 100%
+            +flex(space-between, center)
+            .cardlabel
+                +flex(center, center)
+                gap: $gap-1
+            .actionlabel
+                +flex(center, center)
+                gap: $gap-1
+                .save
+                    +flex(center, center)
+                    gap: $gap-1
+                .share
+                    +flex(center, center)
+                    gap: $gap-1
+                .compare
+                    +flex(center, center)
+                    gap: $gap-1
+    .detailspage
+        +flex()
+        gap: $gap-2
+        .carmedia
+            +flex(start, stretch, column)
+            gap: $gap-3
+        .carwrap
+            position: relative
+            border-radius: $radius-l
+            overflow: hidden
+        .overview
+            +cols(2)
+            gap: $gap-2
+            .body
+                max-width: 350px
+                +cols(2)
+                .disc
+                    +flex(start, center)
+                    gap: $gap-1
+        .description
+            +flex(start, start, column)
+            gap: $gap-2
+            border-top: 1px solid $color-grey-5
+            padding-top: $gap-2
+            padding-bottom: $gap-1
+            .text
+                +flex(start, start, column)
+                gap: $gap-1
+                .quisque
+                    font-size: $font-s
+                    font-weight: 400
+        .features
+            +flex(start, start, column)
+            gap: $gap-1
+            border-top: 1px solid $color-grey-5
+            padding-top: $gap-2
+            padding-bottom: $gap-2
+
+            .all
+                width: 100%
+                +flex(space-between, stretch)
+                gap: $gap-1
+                .titleall
+                    +flex(start, start, column)
+                    gap: $gap-1
+                .ul
+                    +flex(start, start, column)
+                    gap: $gap-1
+                    .icontext
+                        +flex(start, center)
+                        gap: 0.5em
+                        .icon
+                            padding: 0.5em
+                            border-radius: $radius-full
+                            font-size: 8px
+                            color: $color-mid
+                            background: $color-light
+                            +flex(center, center)
+        .dimensions
+            +flex(start, start, column)
+            gap: $gap-1
+            border-top: 1px solid $color-grey-5
+            padding-top: $gap-2
+            .everything
+                +cols(1)
+                gap: $gap-1
+                flex-grow: 1
+                .params
+                    +cols(2)
+                    gap: $gap-3
+                    .desc
+                        white-space: nowrap
+    .map
+        +flex(start, start, column)
+        gap: $gap-1
+        .yandex_map
+            width: 100%
+            iframe
+                position: relative
+                overflow: hidden
+                padding: $gap-1
+                width: 100%
+                aspect-ratio: 2 / 1
+    .calc
+        +flex(start, start, column)
+        gap: $gap-2
+        border-top: 1px solid $color-grey-5
+        padding-top: $gap-2
+        .wrap
+            +flex(start, start, column)
+            gap: $gap-2
+            width: 100%
+            .inputDollar
+                +cols(2)
+                width: 100%
+                gap: $gap-2
+    .rating
+        +flex(start, start, column)
+        gap: $gap-3
+        border-bottom: 1px solid $color-grey-5
+        padding-bottom: $gap-3
+        .current_rating
+            +flex(start, start)
+            width: 100%
+            gap: $gap-3
+            .gradient
+                background: conic-gradient(
+                    $color-mid 80%,
+                    $color-light 80%
+                )
+                border-radius: $radius-full
+                width: 250px
+                aspect-ratio: 1 / 1
+                +flex(center, center)
+                .span
+                    +flex(center, center, column)
+                    width: calc(100% - 2em)
+                    height: calc(100% - 2em)
+                    background: $color-white
+                    border-radius: $radius-full
+                    color: $color-mid
+                    text-align: center
+                    .overallrating
+                        font-size: $font-s
+                        font-weight: 400
+                        white-space: nowrap
+                        width: 100%
+                    .count
+                        font-size: $font-xxl
+                        font-weight: 700
+                    .outof
+                        font-size: $font-s
+                        font-weight: 400
+            .rating_items
+                +cols(2)
+                gap: $gap-1 $gap-3
+                flex-grow: 1
+                .rating_item
+                    +flex(space-between, center)
+                    border-bottom: 1px solid $color-grey-5
+                    padding: 0.5em
+                    .rating_text
+                        +flex(start, start, column)
+                        line-height: 1.5
+                        .rating_name
+                            font-size: $font-s
+                            font-weight: 500
+                        .rating_desc
+                            font-size: $font-s
+                            font-weight: 400
+                    .rating_value
+                        +flex(center, center)
+                        gap: 0.5em
+                        .rating_star
+                            color: $color-mid
+                        .rating_number
+                            letter-spacing: 1px
+        .review
+            +flex(center, center)
+            gap: $gap-1
+            padding-top: $gap-2
+       
+
+            .review_name
+                font-weight: 500
+                font-size: $font-m
+            .review_date
+                font-weight: 400
+                font-size: $font-s
+                color: $color-grey-3
+            .img
+                border-radius: $radius-full
+                height: 40px
+        .reviewStars
+            +flex(start, start, column)
+            gap: $gap-1
+            .review_rate
+                +flex(start, center)
+                gap: $gap-1
+                .review_stars
+                    +flex(start, center)
+                    gap: 0.3em
+                    color: $color-mid
+                .review_text
+                    font-weight: 400
+                    font-size: $font-s
+            .review_paregraph
+                font-weight: 400
+                font-size: $font-s
+    .review_custom
+        +flex(start, start, column)
+        gap: $gap-3
+        .rate_categories
+            width: 100%
+            +cols(2)
+            gap: $gap-2
+            .each_category
+                +cols(2)
+                .review_stars
+                    +flex(start, center)
+                    gap: 0.3em
+                    color: $color-mid
+        .wrap
+            +flex(start, start, column)
+            gap: $gap-2
+            width: 100%
+            .inputDollar
+                +cols(1)
+                width: 100%
+                gap: $gap-3
+                .form_wrap
+                    +cols(2)  
+                    gap: $gap-3        
+    .aside
+        +flex(start, center, column)
+        .prices
+            padding: $gap-2
+            border: 1px solid $color-grey-4
+            border-radius: $radius-l
+            +flex(start, start, column)
+            gap: $gap-1
+            .offer
+                +flex(start, start, column)
+                gap: $gap-1
+                .price
+                    +flex(center, end)
+                    gap: 0.5em
+            .description
+                +flex(start, start, column)
+                gap: $gap-2
+                .text
+                    +flex(start, start, column)
+                    gap: $gap-1
+    .related_listings
+        +flex(start, start, column)
+        gap: $gap-3
+        .top
+            +flex(space-between, center)
+            width: 100%
+        .list
+            +cols(4)
+            justify-items: start
+            gap: $gap-1    

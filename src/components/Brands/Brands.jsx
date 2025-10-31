@@ -26,7 +26,7 @@ const BrandsItem = ({ brand, title }) => {
 
 const Brands = () => {
     return (
-        <div className={s.main}>
+        <section className={s.main}>
             <Container>
                 <div className={s.wrap}>
                     <div className={s.top}>
@@ -39,7 +39,7 @@ const Brands = () => {
                         </div>
                 </div>
             </Container>
-        </div>
+        </section>
     )
 }
 

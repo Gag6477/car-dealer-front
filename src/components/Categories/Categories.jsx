@@ -15,14 +15,7 @@ const categories = [
     { icon: <FaCar />, title: "Car" }
 ]
 
-const CategoriesItem = ({ icon, title }) => {
-    return (
-        <div className={s.item}>
-            {icon}
-            <div className={s.title}>{title}</div>
-        </div>
-    )
-}
+
 const Categories = () => {
     return (
         <section>

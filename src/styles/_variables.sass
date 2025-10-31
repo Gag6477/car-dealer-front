@@ -1,5 +1,7 @@
+@use "sass:color"
 $color-dark  :  #050B20
-$color-light :  #405FF2
+$color-mid :  color.adjust($color-dark, $lightness : 45%)
+$color-light : color.adjust($color-mid, $lightness : 40%)
 $color-accent:  #00b67A
 $color-black :  #000000
 $color-grey-1:  #222222
@@ -8,6 +10,7 @@ $color-grey-3:  #888888
 $color-grey-4:  #bbbbbb
 $color-grey-5:  #eeeeee
 $color-white :  #FFFFFF
+
 
 $font-xxs    : 12px
 $font-xs     : 14px
@@ -22,6 +25,7 @@ $family-main: "DM Sans", sans-serif
 $family-logo: "Manufacturing Consent", sans-serif
 
 $radius-s   : 8px 
+$radius-m   : 12px
 $radius-l   : 16px
 $radius-full: calc(infinity * 1px)
 $transition : 0.5s

@@ -10,6 +10,8 @@ import Team from '../components/Team/Team'
 import Inspiration from '../components/Inspiration/Inspiration'
 import Brands from '../components/Brands/Brands'
 import FindOutMore from '../components/FindOutMore/FindOutMore'
+import Download from '../components/Download/Download'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -23,6 +25,7 @@ const Home = () => {
       <Reviews/>
       <Team/>
       <Inspiration/>
+      <Download/>
       <Brands/>
       <FindOutMore/>
     </div>

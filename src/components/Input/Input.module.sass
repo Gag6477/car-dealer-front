@@ -1,0 +1,30 @@
+.label
+    height: 3em
+    position: relative
+    .input
+        transition: $transition
+        width: 100%
+        height: 100%
+        border-radius: $radius-m
+        border: 1px solid $color-grey-5
+        padding: 0 1em
+        &:focus
+            border-color: $color-mid
+            transition: $transition
+        &:focus ~ .span, &:valid ~ .span
+            top: 0
+            translate: 0 -50%
+            transition: $transition
+            color: $color-mid
+            font-size: $font-xs
+    .span
+        position: absolute
+        top: 50%
+        translate: 0 -50%
+        left: 1em
+        color: $color-grey-3
+        background: $color-white
+        padding: 0 1em
+        transition: $transition
+        font-size: $font-s
+        pointer-events: none

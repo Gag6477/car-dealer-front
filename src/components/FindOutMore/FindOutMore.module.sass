@@ -1,14 +1,11 @@
 .main
-    position: relative
     width: 100%
-    height: 70vh
+    +flex(start, center)
+    padding: $gap-5 0
     background-blend-mode: darken
     .wrap
         +flex(start, start, column)
-        gap: $gap-2
-        position: absolute
-        top:26%
-        left: 10%
+        gap: $gap-2 
         .findOutMore
             font-size: $font-special
             font-weight: 400

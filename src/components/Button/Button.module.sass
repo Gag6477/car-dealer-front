@@ -8,7 +8,7 @@
     +flex(center)
     transition: $transition
     &:hover
-        letter-spacing: 1px
+        scale: 1.03
 .normal
     border-radius: $radius-s
 .classic
@@ -43,9 +43,8 @@
 
 .rtl
     flex-direction: row-reverse
-.clear-btn 
+.clear-btn
     background: transparent
-    border: none
     color: inherit
     cursor: pointer
     border: solid 1px $color-white
@@ -55,4 +54,40 @@
         color: $color-grey-5
     &.fill
         color: $color-white
+.test-drive
+    background: $color-white
+    color: $color-dark
+    cursor: pointer
+    border: solid 1px $color-dark
+    border-radius: $radius-l
+    padding: 15px 70px
+    &:hover
+        color: $color-grey-5
+    &.fill
+        color: $color-dark
+.bluebutt
+    background: $color-mid
+    color: $color-white
+    cursor: pointer
+    border-radius: $radius-l
+    padding: 15px 70px
+    &:hover
+        color: $color-grey-5
+    &.fill
+        color: $color-white
+.light-blue
+    background: $color-light
+    color: $color-white
+    cursor: pointer
+    border-radius: $radius-s
+    padding: 15px 50px
+    &:hover
+        color: $color-grey-5
+    &.fill
+        color:  $color-mid
+      
 
+
+
+
+    
